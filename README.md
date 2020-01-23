@@ -1,3 +1,9 @@
+# Redux
+
+Reducer action的解析器 
+
+state + action -> reducer() -> new state
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 `npx create-react-app todo-redux`
