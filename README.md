@@ -1,6 +1,7 @@
 # Redux
 
-Reducer action的解析器 
+Reducer action的解析器
+所有 actions 都放至一 Reducer 完成顯然不合適 Reducer拆分 便於系統拓展和維護 透過合併API `combineReducers` 來完成
 
 state + action -> reducer() -> new state
 
