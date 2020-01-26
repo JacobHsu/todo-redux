@@ -1,10 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./reducers";
+import App from "./components/App";
 
-import App from './components/App';
-import store from './store'; // sotre相當於在全局作用域下 運行就會執行
+const store = createStore(rootReducer);
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
+// 使用 redux 要根組件注入 store
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);

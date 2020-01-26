@@ -9,6 +9,19 @@ reducer -> createStore -> store
 actions -> dispatch -> store  
 state -> getState -> store  
 
+### react-redux
+
+向根組件注入 Store -> 借助react-redux 提供的Provider組件
+
+連接react組件和redux狀態層 -> 借助 connect 高階組件
+
+獲取react組件所需的 state 和 actions -> map api
+
+展示型組件(負責UI)  props
+容器型組件(負責邏輯) redux store(讀) & actions(寫)
+
+containers 容器型組件 設計參照 components 需要與redux連接 進行數據交互的 
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 `npx create-react-app todo-redux`
