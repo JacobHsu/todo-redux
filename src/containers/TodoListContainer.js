@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { toggleTodo } from "../actions";
+import { toggleTodo, fetchTodos } from "../actions";
 import TodoList from "../components/TodoList";
 
 // 過濾 state.todos 真正要展示的數據
@@ -18,12 +18,13 @@ const getVisibleTodos = (todos, filter) => {
 
 // State 映射到 Props
 const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos, state.filter)
+  todos: getVisibleTodos(state.todos.data, state.filter)
 });
 
 // Dispatch 映射到 Props
 const mapDispatchToProps = dispatch => ({
-  toggleTodo: id => dispatch(toggleTodo(id))
+  toggleTodo: id => dispatch(toggleTodo(id)),
+  fetchTodos: () => dispatch(fetchTodos())
 });
 
 // connect()(TodoList); 先是調用 connect() 函數 
