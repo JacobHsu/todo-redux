@@ -26,6 +26,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npx create-react-app todo-redux`
 
+[Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)  
+https://github.com/zalmoxisus/redux-devtools-extension
+
 ### action
 
 `redux-thunk`: Thunk middleware for Redux
