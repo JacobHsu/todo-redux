@@ -9,6 +9,11 @@ reducer -> createStore -> store
 actions -> dispatch -> store  
 state -> getState -> store  
 
+[ducks-modular-redux](https://github.com/erikras/ducks-modular-redux)  
+reducers, action types, actions 組合到一個文件中，作為獨立模塊
+劃分模塊依據，應用狀態State，而不是界面功能 (視圖層和狀態層解耦)
+src/ components, containers/feature1, redux  
+
 ### react-redux
 
 向根組件注入 Store -> 借助react-redux 提供的Provider組件
