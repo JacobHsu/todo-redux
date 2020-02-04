@@ -1,24 +1,26 @@
 import { connect } from "react-redux";
 import { toggleTodo, fetchTodos } from "../actions";
 import TodoList from "../components/TodoList";
+import {getVisibleTodos} from "../selectors"
 
-// 過濾 state.todos 真正要展示的數據
-const getVisibleTodos = (todos, filter) => {
-  switch (filter) {
-    case "all":
-      return todos;
-    case "completed":
-      return todos.filter(t => t.completed);
-    case "active":
-      return todos.filter(t => !t.completed);
-    default:
-      return new Error("Unknown filter: " + filter);
-  }
-};
+// 過濾 state.todos 真正要展示的數據 移動至 selectors
+// const getVisibleTodos = (todos, filter) => {
+//   switch (filter) {
+//     case "all":
+//       return todos;
+//     case "completed":
+//       return todos.filter(t => t.completed);
+//     case "active":
+//       return todos.filter(t => !t.completed);
+//     default:
+//       return new Error("Unknown filter: " + filter);
+//   }
+// };
 
 // State 映射到 Props
 const mapStateToProps = state => ({
-  todos: getVisibleTodos(state.todos.data, state.filter)
+  //todos: getVisibleTodos(state.todos.data, state.filter)
+  todos: getVisibleTodos(state)
 });
 
 // Dispatch 映射到 Props
