@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import thunkMiddleware from "redux-thunk";
 import rootReducer from "./reducers";
 import App from "./components/App";
+import loggerMiddleware from "./middlewares/logger"
 
 
 // applyMiddleware(thunkMiddleware) 引入可以處理異步action的中間件
@@ -12,7 +13,7 @@ import App from "./components/App";
 
 // composeEnhancers redux-devtools-extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware, loggerMiddleware)));
 
 // 使用 redux 要根組件注入 store
 ReactDOM.render(
