@@ -20,7 +20,7 @@ import {getVisibleTodos} from "../selectors"
 // State 映射到 Props
 const mapStateToProps = state => ({
   //todos: getVisibleTodos(state.todos.data, state.filter)
-  todos: getVisibleTodos(state)
+  todos: getVisibleTodos(state).toJS() //toJS轉換成普通JS對象
 });
 
 // Dispatch 映射到 Props
