@@ -7,7 +7,7 @@ import rootReducer from "./reducers";
 import App from "./components/App";
 // Middleware其實是 Store Enhander的一個特例 日常盡可能使用Middleware 約束少改底層邏輯
 // applyMiddleware 的返回值就是 Store Enhander
-import loggerMiddleware from "./middlewares/logger"
+//import loggerMiddleware from "./middlewares/logger"
 import loggerEnhancer from "./enhancers/logger"
 
 // applyMiddleware(thunkMiddleware) 引入可以處理異步action的中間件
@@ -15,7 +15,7 @@ import loggerEnhancer from "./enhancers/logger"
 
 
 // composeEnhancers redux-devtools-extension
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 //const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware, loggerMiddleware)));
 const store = createStore(rootReducer, compose(applyMiddleware(thunkMiddleware),loggerEnhancer));
 
