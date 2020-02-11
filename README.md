@@ -42,6 +42,10 @@ https://github.com/zalmoxisus/redux-devtools-extension
 一個開發者要能夠正確的使用 Redux，就要先掌握 Store、Action、Reducer 這些基本概念，如果想要進一步透過 Redux 處理非同步行為、API 請求、Logging 等等，就要學會使用 Redux Middleware。
 [詳解 Redux Middleware](https://medium.com/@max80713/%E8%A9%B3%E8%A7%A3-redux-middleware-efd6a506357e)
 
+### reselect
+
+[reselect](https://github.com/reduxjs/reselect) 減少state的重複計算
+
 ## Available Scripts
 
 In the project directory, you can run:
