@@ -1,5 +1,21 @@
 # Redux
 
+redux 集中管理 全局唯一
+
+```js
+{
+    text: '',
+    todos: [
+        {
+            id: 1,
+            text: 'learn react',
+            completed: true
+        }
+    ],
+    filter : 'all'
+}
+```
+
 Reducer action的解析器
 所有 actions 都放至一 Reducer 完成顯然不合適 Reducer拆分 便於系統拓展和維護 透過合併API `combineReducers` 來完成
 
@@ -35,6 +51,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 https://github.com/zalmoxisus/redux-devtools-extension
 
 ### action
+
+描述如何修改redux狀態  
+action其實就是JSON對象 tpye屬性必需 發送透過 `store.dispatch`  
 
 `redux-thunk`: Thunk middleware for Redux
 透過redux-thunk這個middleware協助redux處理非同步事件

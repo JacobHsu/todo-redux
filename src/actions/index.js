@@ -38,22 +38,39 @@ export const fetchTodos = () => {
 }
 
 // 以下為同步的處理 通常API是異步的情況
+
+/**
+ * 新增待辦事項
+ * @param {*} text 
+ */
 export const addTodo = (text) => ({
   type: ADD_TODO,
   id: nextTodoId++,
   text
 })
 
+/**
+ * 更改待辦事項狀態
+ * @param {*} id 
+ */
 export const toggleTodo = id => ({
   type: TOGGLE_TODO,
   id
 })
 
+/**
+ * 設置過濾狀態
+ * @param {*} filter 
+ */
 export const setFilter = filter => ({
   type: SET_FILTER,
   filter
 })
 
+/**
+ * 設置新增待辦事項的文本訊息
+ * @param {*} text 
+ */
 export const setTodoText = text => ({
   type: SET_TODO_TEXT,
   text
